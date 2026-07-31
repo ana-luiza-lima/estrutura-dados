@@ -30,7 +30,7 @@ public class Projeto{
         }
         double custo = 0;
 
-        double bonusSupervisao = (this.gerente.getSalario() * 0.01) * this.funcionarios.size();
+        double bonusSupervisao = (this.gerente.getSalario() * 0.01) * this.funcionarios.size(); //rever
         this.gerente.setBonus(bonusSupervisao);
 
         if(finalizado){
