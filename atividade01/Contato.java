@@ -1,5 +1,3 @@
-package atividade01;
-
 public class Contato {
 
     private String nome;
@@ -18,6 +16,14 @@ public class Contato {
         this.email = email;
     }
 
+    public void setNome(String nome){
+        this.nome = nome;
+    }
+
+    public void setTelefone(String telefone){
+        this.telefone = telefone;
+    }
+
     public String getNome(){
         return this.nome;
     }
@@ -28,6 +34,13 @@ public class Contato {
 
     public String getEmail(){
         return this.email;
+    }
+
+    public String exibirContato(){
+        return "Nome: " + this.nome + "/n" +
+                "Telefone: " + this.telefone + "/n" + 
+                "Email: " + this.email + "/n";
+
     }
 
 
