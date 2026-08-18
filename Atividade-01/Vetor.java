@@ -16,20 +16,25 @@ public class Vetor<T> {
         Random random = new Random();
         for(int i = 0; i < quantidadeNumeros; i++){
             int x = random.nextInt(limite);
+            IO.println("Número gerado: " + x);
             int v = verificaNumero(x);
+            IO.println("Verificação: " + v);
             if(v != -1){
-                inserir((T) Integer.valueOf(v));
-                IO.println("Inserido: " + v);
-                break;
+                inserir((T) Integer.valueOf(x));
+                IO.println("Inserido: " + x + " | Na posição: " + v);
             }
         }
         
     }
 
     public int verificaNumero(int n){
-        for(int i = 0; i < tamanho; i++){
+        if(tamanho == 0){
+            return 0;
+        }
+        for(int i = 0; i < this.tamanho; i++){
             int valor = (Integer) ler(i);
-            if(valor < n){
+            IO.println("Verifica Número: " + valor);
+            if(n < valor){
                 return i;
             } else {
                 return -1;
