@@ -19,6 +19,46 @@ public class Vetor<T> {
         tamanho++;
     }
 
+    public void inserirOrdenado(Comparable elemento) {
+        if (tamanho == elementos.length) {
+            expandir();
+        }
+
+        int posicao = tamanho;
+        for (int i = 0; i < tamanho; i++) {
+            if (elemento.compareTo(elementos[i]) < 0) {
+                posicao = i;
+                break;
+            }
+        }
+
+        for (int i = tamanho; i > posicao; i--) {
+            elementos[i] = elementos[i-1];
+        }
+
+        elementos[posicao] = (T) elemento;
+        tamanho++;
+    }
+
+    public T ler(int indice) {
+        if (indice < 0 || indice >= tamanho) {
+            throw new IndexOutOfBoundsException("Índice inválido: " + indice);
+        }
+        return elementos[indice];
+    }
+
+    public int obterTamanho() {
+        return this.tamanho;
+    }
+
+    public Integer[] exportarArray() {
+        Integer[] array = new Integer[tamanho];
+        for (int i = 0; i < tamanho; i++) {
+            array[i] = (Integer) elementos[i];
+        }
+        return array;
+    }
+
     @SuppressWarnings("unchecked")
     private void expandir() {
         T[] novo = (T[]) new Object[elementos.length * 2];
