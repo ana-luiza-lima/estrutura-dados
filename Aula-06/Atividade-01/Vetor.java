@@ -14,28 +14,29 @@ public class Vetor<T> {
     @SuppressWarnings("unchecked")
     public void inserirAleatorio(int quantidadeNumeros, int limite){
         Random random = new Random();
-        for(int i = 0; i < quantidadeNumeros; i++){
+        int inseridos = 0;
+        while(inseridos < quantidadeNumeros){
             int x = random.nextInt(limite);
-            int v = verificaNumero(x);
-            if(v != -1){
-                inserir((T) Integer.valueOf(v));
-                IO.println("Inserido: " + v);
-                break;
+            int posicao = verificaNumero(x);
+            if(posicao != -1){
+                inserir(posicao, (T) Integer.valueOf(x));
+                inseridos++;
             }
         }
         
     }
 
     public int verificaNumero(int n){
-        for(int i = 0; i < tamanho; i++){
+        for(int i = 0; i < this.tamanho; i++){
             int valor = (Integer) ler(i);
-            if(valor < n){
-                return i;
-            } else {
+            if(n == valor){
                 return -1;
             }
+            if(n < valor){
+                return i;
+            }
         }
-        return -1;
+        return tamanho;
     }
 
     public void inserir(T elemento) {
@@ -43,6 +44,17 @@ public class Vetor<T> {
             expandir();
         }
         elementos[tamanho] = elemento;
+        tamanho++;
+    }
+
+    public void inserir(int posicao, T elemento) {
+        if (tamanho == elementos.length) {
+            expandir();
+        }
+        for (int i = tamanho; i > posicao; i--) {
+            elementos[i] = elementos[i - 1];
+        }
+        elementos[posicao] = elemento;
         tamanho++;
     }
 
