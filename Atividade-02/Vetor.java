@@ -52,9 +52,6 @@ public class Vetor<T> {
         reduzir();
     }
 
-
-
-
     public void imprimir() {
         System.out.print("[");
         for (int i = 0; i < tamanho ; i++) {
