@@ -44,7 +44,7 @@ public class Vetor<T>{
     private void reduzir(){
         if(tamanho <= elementos.length/4){
             T[] novo = (T[]) new Object[elementos.length/2];
-            for (int i = 0; i < elementos.length; i++){
+            for (int i = 0; i < novo.length; i++){
                 novo[i] = elementos[i];
             }
             elementos = novo;
@@ -56,7 +56,7 @@ public class Vetor<T>{
             System.out.println("Indice Inválido");
             return;
         }
-        for (int i = indice; i < tamanho; i++){
+        for (int i = indice; i < tamanho - 1; i++){
             elementos[i] = elementos[i+1];
         }
         elementos[tamanho-1] = null;
