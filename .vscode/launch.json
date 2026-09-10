@@ -4,12 +4,11 @@
     // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        jdk
-        
         {
-            "type": "jdk",
+            "type": "java",
+            "name": "Launch Java App",
             "request": "launch",
-            "name": "Launch Java App"
+            "mainClass": "${file}"
         }
     ]
 }

@@ -1,6 +1,6 @@
-package vetor.testes;
+package aula05.vetor.testes;
 
-import vetor.VetorEstatico;
+import aula05.vetor.VetorEstatico;
 
 public class ex1 {
 

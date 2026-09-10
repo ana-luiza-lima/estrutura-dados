@@ -1,7 +1,7 @@
-package vetor.testes;
+package aula05.vetor.testes;
 
-import vetor.Produto;
-import vetor.Vetor;
+import aula05.vetor.Produto;
+import aula05.vetor.Vetor;
 
 public class ex10 {
 

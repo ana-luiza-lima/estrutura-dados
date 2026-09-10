@@ -1,4 +1,4 @@
-package vetor.testes;
+package aula05.vetor.testes;
 
 public class teste {
 

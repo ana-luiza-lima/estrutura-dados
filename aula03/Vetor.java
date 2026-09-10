@@ -1,3 +1,5 @@
+package aula03;
+
 public class Vetor<T>{
     private T[] elementos;
     private int tamanho;

@@ -1,4 +1,4 @@
-package AgendaVetorGenérico;
+package aula04;
 
 public class Vetor<T> {
 

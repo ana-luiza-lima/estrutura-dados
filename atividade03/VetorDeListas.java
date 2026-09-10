@@ -1,6 +1,4 @@
-package vetor.testes;
-
-import vetor.VetorEstatico;
+package atividade03;
 
 public class VetorDeListas {
 

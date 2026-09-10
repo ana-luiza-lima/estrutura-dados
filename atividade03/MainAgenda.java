@@ -1,3 +1,5 @@
+package atividade03;
+
 import javax.swing.*;
 import java.util.Scanner;
 

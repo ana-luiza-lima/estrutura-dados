@@ -1,3 +1,5 @@
+package aula06.atividade01;
+
 public class teste1 {
     
     public static void main(String[] args) {

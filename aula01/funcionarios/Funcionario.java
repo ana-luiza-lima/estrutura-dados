@@ -1,3 +1,5 @@
+package aula01.funcionarios;
+
 public class Funcionario {
 
 

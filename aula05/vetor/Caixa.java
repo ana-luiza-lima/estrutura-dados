@@ -1,4 +1,4 @@
-package vetor;
+package aula05.vetor;
 
 public class Caixa<T> {
 

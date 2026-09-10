@@ -1,6 +1,6 @@
-package vetor.testes;
+package aula05.vetor.testes;
 
-import vetor.Caixa;
+import aula05.vetor.Caixa;
 
 public class ex9 {
 

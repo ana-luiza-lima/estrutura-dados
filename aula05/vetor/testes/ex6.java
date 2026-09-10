@@ -1,6 +1,6 @@
-package vetor.testes;
+package aula05.vetor.testes;
 
-import vetor.VetorDinamico;
+import aula05.vetor.VetorDinamico;
 
 public class ex6 {
 

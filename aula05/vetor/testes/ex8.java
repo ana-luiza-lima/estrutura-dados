@@ -1,6 +1,6 @@
-package vetor.testes;
+package aula05.vetor.testes;
 
-import vetor.VetorObjeto;
+import aula05.vetor.VetorObjeto;
 
 public class ex8 {
 

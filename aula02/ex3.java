@@ -1,3 +1,5 @@
+package aula02;
+
 public class ex3 {
     static void main() {
 

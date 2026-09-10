@@ -1,14 +1,13 @@
-package vetor.testes;
+package aula06;
 
-import vetor.Produto;
-import vetor.Vetor;
+import aula06.atividade01.Vetor;
 
 import java.util.Random;
 
 public class ex12 {
 
 
-    static void main() {
+    public static void main(String[] args) {
 
         Vetor<Integer> vetor =  new Vetor<>(10);
         inserirAleatorio(vetor, 100, 200);
@@ -20,7 +19,7 @@ public class ex12 {
     public static void inserirAleatorio(Vetor<Integer> vetor, int quantidade, int range) {
 
         Random aleatorio = new Random();
-        while (vetor.obterTamanho() < quantidade) {
+        while (vetor.getTamanho() < quantidade) {
             int numeroSorteado = aleatorio.nextInt(range);
 //            vetor.inserirOrdenadov2(numeroSorteado);
             vetor.inserir(numeroSorteado);
@@ -29,7 +28,7 @@ public class ex12 {
     }
 
     public int buscarLinear(Vetor<Integer> vetor, int alvo) {
-        for (int i = 0 ; i < vetor.obterTamanho(); i++) {
+        for (int i = 0 ; i < vetor.getTamanho(); i++) {
             if (vetor.ler(i) == alvo) {
                 return i;
             }
@@ -38,7 +37,7 @@ public class ex12 {
     }
 
     public int buscarLinearOrdenada(Vetor<Integer> vetor, int alvo) {
-        for (int i = 0 ; i < vetor.obterTamanho(); i++) {
+        for (int i = 0 ; i < vetor.getTamanho(); i++) {
             if (vetor.ler(i) == alvo) {
                 return i;
             } else if (vetor.ler(i) > alvo) {
@@ -51,7 +50,7 @@ public class ex12 {
     public int buscarBinaria(Vetor<Integer> vetor, int alvo) {
 
         int inicio = 0;
-        int fim = vetor.obterTamanho();
+        int fim = vetor.getTamanho();
 
         while (inicio <= fim) {
 
@@ -70,6 +69,8 @@ public class ex12 {
         }
 
 
+
+        return -1;
 
     }
 

@@ -1,4 +1,4 @@
-package vetor;
+package atividade02;
 
 public class Vetor<T> {
 

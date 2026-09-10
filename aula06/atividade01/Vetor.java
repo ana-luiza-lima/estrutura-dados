@@ -1,3 +1,5 @@
+package aula06.atividade01;
+
 import java.util.Random;
 
 public class Vetor<T> {

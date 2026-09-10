@@ -1,3 +1,5 @@
+package aula01.atividade01;
+
 public class Contato {
 
     private String nome;

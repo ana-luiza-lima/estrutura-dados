@@ -1,3 +1,5 @@
+package aula03;
+
 
 
 public class ex6 {

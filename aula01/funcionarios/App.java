@@ -1,3 +1,5 @@
+package aula01.funcionarios;
+
 
 public class App{
     public static void main(String[] args){
