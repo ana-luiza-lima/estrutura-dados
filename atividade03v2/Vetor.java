@@ -72,6 +72,17 @@ public class Vetor<T>{
                 System.out.println(", ");
             }
         }
-        System.out.println("]")
+        System.out.println("]");
+    }
+
+    public T ler(int indice) {
+        if (indice < 0 || indice >= tamanho) {
+            return null;
+        }
+        return elementos[indice];
+    }
+
+    public int getTamanho() {
+        return tamanho;
     }
 }
