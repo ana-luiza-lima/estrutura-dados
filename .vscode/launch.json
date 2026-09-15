@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "DecToBin",
+            "request": "launch",
+            "mainClass": "DecToBin",
+            "projectName": ""
+        },
+        {
+            "type": "java",
+            "name": "teste1",
+            "request": "launch",
+            "mainClass": "teste1",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "Launch Java App",
             "request": "launch",
             "mainClass": "${file}"
