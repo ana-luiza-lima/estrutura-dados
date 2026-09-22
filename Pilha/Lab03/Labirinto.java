@@ -1,4 +1,4 @@
-package Lab03;
+package atividade;
 
 public class Labirinto {
 
@@ -57,9 +57,6 @@ public class Labirinto {
     private int linhaFinal = 21;
     private int colunaFinal = 49;
 
-    private boolean[][] visitado;
-    private Posicao[][] anterior;
-
     public void imprimir() {
 
 
@@ -71,62 +68,10 @@ public class Labirinto {
         }
     }
 
-    // public boolean resolver() {
-    //     visitado = new boolean[mapa.length][mapa[0].length];
-    //     anterior = new Posicao[mapa.length][mapa[0].length];
 
-    //     Pilha<Posicao> pilha = new Pilha<>(mapa.length * mapa[0].length);
-    //     pilha.push(new Posicao(linhaInicial, colunaInicial));
-
-    //     while (!pilha.isEmpty()) {
-    //         Posicao atual = pilha.pop();
-    //         int linha = atual.getLinha();
-    //         int coluna = atual.getColuna();
-
-    //         if (mapa[linha][coluna] == 'T') {
-    //             marcarCaminho(atual);
-    //             return true;
-    //         }
-
-    //         if (!visitado[linha][coluna]) {
-    //             visitado[linha][coluna] = true;
-
-    //             int[][] direcoes = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
-    //             for (int[] direcao : direcoes) {
-    //                 int novaLinha = linha + direcao[0];
-    //                 int novaColuna = coluna + direcao[1];
-
-    //                 if (posicaoValida(novaLinha, novaColuna)) {
-    //                     Posicao vizinho = new Posicao(novaLinha, novaColuna);
-    //                     pilha.push(vizinho);
-    //                     if (anterior[novaLinha][novaColuna] == null) {
-    //                         anterior[novaLinha][novaColuna] = atual;
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-
-    //     return false;
-    // }
-
-    // private boolean posicaoValida(int linha, int coluna) {
-    //     if (linha < 0 || linha >= mapa.length || coluna < 0 || coluna >= mapa[0].length) {
-    //         return false;
-    //     }
-    //     if (visitado[linha][coluna]) {
-    //         return false;
-    //     }
-    //     char celula = mapa[linha][coluna];
-    //     return celula == ' ' || celula == 'T';
-    // }
-
-    // private void marcarCaminho(Posicao destino) {
-    //     Posicao atual = anterior[destino.getLinha()][destino.getColuna()];
-    //     while (atual != null && mapa[atual.getLinha()][atual.getColuna()] != 'P') {
-    //         mapa[atual.getLinha()][atual.getColuna()] = '+';
-    //         atual = anterior[atual.getLinha()][atual.getColuna()];
-    //     }
-    // }
-
+    public static void main(String[] args) {
+        Labirinto labirinto = new Labirinto();
+        labirinto.imprimir();
+        
+    }
 }

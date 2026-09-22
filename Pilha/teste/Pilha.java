@@ -1,3 +1,5 @@
+package Lab03;
+
 public class Pilha<T extends Comparable<T>> {
 
     private int topo;
