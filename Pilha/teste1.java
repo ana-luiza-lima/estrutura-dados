@@ -1,6 +1,6 @@
 public class teste1 {
 
-    static void main(){
+    public static void main(String[] args) {
         Pilha<Integer> pilha = new Pilha<>(10);
 
         System.out.println("A pilha esta vazia: " + pilha.isEmpty());
