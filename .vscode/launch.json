@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Labirinto",
+            "request": "launch",
+            "mainClass": "atividade.Labirinto",
+            "projectName": ""
+        },
+        {
+            "type": "java",
             "name": "DecToBin",
             "request": "launch",
             "mainClass": "DecToBin",

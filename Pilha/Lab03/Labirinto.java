@@ -68,10 +68,49 @@ public class Labirinto {
         }
     }
 
+    public boolean resolver() {
+        Pilha<int[]> pilha = new Pilha<>(mapa.length * mapa[0].length * 4);
+        pilha.push(new int[]{linhaInicial, colunaInicial});
+
+        while (!pilha.isEmpty()) {
+            int[] posicao = pilha.pop();
+            int linha = posicao[0];
+            int coluna = posicao[1];
+
+            if (linha == linhaFinal && coluna == colunaFinal) {
+                return true;
+            }
+
+            if (mapa[linha][coluna] != '.') {
+                mapa[linha][coluna] = '.';
+
+                if (linha > 0 && mapa[linha - 1][coluna] == ' ') {
+                    pilha.push(new int[]{linha - 1, coluna});
+                }
+                if (linha < mapa.length - 1 && mapa[linha + 1][coluna] == ' ') {
+                    pilha.push(new int[]{linha + 1, coluna});
+                }
+                if (coluna > 0 && mapa[linha][coluna - 1] == ' ') {
+                    pilha.push(new int[]{linha, coluna - 1});
+                }
+                if (coluna < mapa[linha].length - 1 && mapa[linha][coluna + 1] == ' ') {
+                    pilha.push(new int[]{linha, coluna + 1});
+                }
+            }
+        }
+
+        return false;
+
+    }
+
 
     public static void main(String[] args) {
         Labirinto labirinto = new Labirinto();
         labirinto.imprimir();
-        
+        if (labirinto.resolver()) {
+            System.out.println("Labirinto resolvido com sucesso!");
+        } else {
+            System.out.println("Não foi possível resolver o labirinto.");
+        }
     }
 }

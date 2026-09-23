@@ -1,10 +1,12 @@
-public class Pilha<T extends Comparable<T>> {
+package atividade;
+
+public class Pilha<T> {
 
     private int topo;
     private T[] elementos;
 
     public Pilha(int capacidade) {
-        this.elementos = ((T[]) new Comparable[capacidade]);
+        this.elementos = (T[]) new Object[capacidade];
         this.topo = -1;
     }
 
