@@ -1,4 +1,4 @@
-public class teste1 {
+public class vetorIDS {
 
     public static void main(String[] args) {
         Pilha<Integer> pilha = new Pilha<>(10);
